@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("TMDB Popular Movies Today");
-        activityMainBinding= DataBindingUtil.setContentView(this,R.layout.activity_main);
+        activityMainBinding= DataBindingUtil.setContentView(this,R.layout.activity_main); //binding data with layout
 
-        mainActivityViewModel= ViewModelProviders.of(this).get(MainActivityViewModel.class);
+        mainActivityViewModel= ViewModelProviders.of(this).get(MainActivityViewModel.class);  // create instance of view model using viewModel providers
         getPopularMovies();
 
         swipeRefreshLayout = activityMainBinding.swipeLayout;
